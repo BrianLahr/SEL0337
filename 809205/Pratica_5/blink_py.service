@@ -1,0 +1,11 @@
+[Unit]
+Description= Blink LED em Python
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3 /home/sel/809205/Pratica_5/blink_RPi.py
+ExecStop=/usr/bin/python3 /home/sel/809205/Pratica_5/blink_finish.py
+user=SEL
+
+[Install]
+WantedBy=multi-user.target
