@@ -1,0 +1,18 @@
+#!/bin/bash  # Especifica que o script deve ser executado com o interpretador Bash
+
+PIN=23  # Define a variável PIN como 23, que representa o número do pino GPIO a ser utilizado
+
+# Exportando o pino para que o sistema possa controlá-lo
+echo $PIN > /sys/class/gpio/export  # Registra o pino 23 no sistema GPIO, tornando-o disponível para uso
+
+# Configurando a direção do pino como saída
+echo out > /sys/class/gpio/gpio$PIN/direction  # Define a direção do pino como saída (out), permitindo enviar sinais
+
+# Loop infinito para piscar o LED
+while [ 1 ]; do  # Inicia um loop infinito (deveria ser 'while true; do')
+    echo 1 > /sys/class/gpio/gpio$PIN/value  # Envia um sinal alto (1) para acender o LED conectado ao pino 23
+    sleep 0.2  # Pausa por 0,2 segundos, mantendo o LED aceso
+    
+    echo 0 > /sys/class/gpio/gpio$PIN/value  # Envia um sinal baixo (0) para apagar o LED
+    sleep 0.2  # Pausa por mais 0,2 segundos, mantendo o LED apagado
+done  # Fim do loop

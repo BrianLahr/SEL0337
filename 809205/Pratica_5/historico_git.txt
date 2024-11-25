@@ -1,0 +1,11 @@
+commit a29d714d2557bfa77a2151e4637ddc9141e76040
+Author: BrianLahr <brian.lahr@usp.br>
+Date:   Mon Nov 18 20:58:10 2024 +0000
+
+    Adicionados os arquivos referentes a Parte 2
+
+commit 2e980b505394ba07c39ba664e618f95c92d3e28b
+Author: BrianLahr <brian.lahr@usp.br>
+Date:   Mon Nov 18 20:53:56 2024 +0000
+
+    Adicionados os arquivos da parte 1

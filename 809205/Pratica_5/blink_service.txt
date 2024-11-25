@@ -1,0 +1,11 @@
+[Unit]
+Description= Blink LED  # Descrição do serviço que será exibida no sistema
+After=multi-user.target  # Define que este serviço deve ser iniciado após o multi-user target
+
+[Service]
+ExecStart=/home/sel/809205/Pratica_5/blink_s.sh  # Comando para iniciar o serviço, chamando o script blink_s.sh
+#ExecStop=  # Linha comentada onde poderia ser especificado um comando para parar o serviço
+User=SEL  # Define que o serviço será executado sob o usuário SEL
+
+[Install]
+WantedBy=multi-user.target  # Define que este serviço deve ser iniciado no nível de execução multi-user
